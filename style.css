@@ -151,3 +151,6 @@ body{
   font-weight: bold;
   justify-content: space-evenly;
 }
+.prev{
+left:0; 
+}
