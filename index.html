@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>Edgewater Takeouts</title>
+  
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<header class="menu">
+  <img class="logo" src="assets/logo2.svg"></img>
+  <a href="#"><button>Menu</button></a>
+  <a href="#Place_order"><button>Place order here</button></a>
+  <a href="#Contact us"><button>Contact us</button></a>
+</header>
+<img src="assets/Acts_logo.png" />
+<h1 style="font-size:60px;">Edgewater ToGos</h1>
+</head>
+<body>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="assets/monday.jpg" style="width:100%">
+  <div class="text">Monday Menu</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="assets/Tuesday.jpg" style="width:100%">
+  <div class="text">Tuesday Menu</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="assets/Wednesday.jpg" style="width:100%">
+  <div class="text">Wednesday Menu</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)" id="back">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<body style="font-size: xx-large;">
+  <h1 style="font-size:60px;" id="Place_order">Place Order here</h1>
+  <form>
+  <label>
+    First Name:
+    <input type="First_Name" name="First Name">
+    Last Name
+    <input Type="Last_Name" name="Last Name">
+    Apt
+    <input Type="APT" name="Apt #">
+  <section>
+      <label for="Day">Select a Day:</label>
+      
+      <select name="day" id="day option">
+        <option value="Monday">Monday</option>
+        <option value="Tuesday">Tuesday</option>
+        <option value="Wednesday">Wednesday</option>
+        <option value="Thursday">Thursday</option>
+        <option value="Friday">Friday</option>
+        <option value="Saturday">Saturday</option>
+        <option value="Sunday">Sunday</option>
+      </select>
+</label>
+<section>
+<label for="Salad">Choose a salad:</label>
+
+<select name="Salad" id="Salad">
+  <option value="Edgewater Salad">Edgewater Salad</option>
+  <option value="Iceberg salad">Iceberg Salad</option>
+  <option value="Weekly salad">Weekly Salad</option>
+  <option value="Cole slaw">Cole Slaw</option>
+  <option value="Healthy Slaw">Healthy Salad</option>
+  <option value="No salad">No Salad</option>
+</select>
+<label for="Dressing">Choose a Dressing:</label>
+
+<select name="Dressing" id="Dressing option">
+  <option value="Ranch">Ranch</option>
+  <option value="Balasamic Dressing">Balasamic Dressing</option>
+  <option value="Thousand Island">Thousand Island</option>
+  <option value="No Dressing">No Dressing</option>
+</select>
+<label for="Dressing">Choose a Soup:</label>
+
+<select name="Soups" id="Soups option">
+  <option value="Soup Of the Day">Soup of the day</option>
+  <option value="Chicken Noodle Soup">Chicken Noodle Soup</option>
+  <option value="Chicken Broth">Chicken Broth</option>
+  <option value="No Soup">No Soup</option>
+</select>
+</section>
+<section>
+  <label for="Entree">Choose an Entree:</label>
+
+<select name="Entree" id="Entree">
+  <option value="Entree Option 1">Entree Option 1</option>
+  <option value="Entree Option 2">Entree Option 2</option>
+  <option value="Fresh Catch of the Day">Fresh Catch of the Day</option>
+  <option value="Plain Catch">Plain Catch</option>
+  <option value="Salad of the Week">Salad of the Week</option>
+  <option value="Steak of the Week">Steak of the Week</option>
+  <option value="Grilled Salmon">Grilled Salmon</option>
+  <option value="Lox and Bagle Platter">Lox and Bagle Platter</option>
+  <option value="Herb Roasted Chicken leg">Herb Roasted Chicken leg</option>
+  <option value="Herb Rosated Chicken Breast">Herb Rosated Chicken Breast</option>
+  <option value="No Entree">No Entree</option>
+</select>
+</section>
+<section>
+  <label for="Side 2">First Side:</label>
+
+  <select name="side 1" id="side 1">
+    <option value="Side Option 1">Side Option 1</option>
+    <option value="Side Option 2">Side Option 2</option>
+    <option value="Side Option 3">Side Option 3</option>
+    <option value="Side Option 4">Side Option 4</option>
+    <option value="Mashed Potato">Mashed Potato</option>
+    <option value="Sweet Potato">Sweet Potato</option>
+    <option value="Baked Potato">Baked Potato</option>
+    <option value="No Side">No Side</option>
+  </select>
+  <label for="Side 2">Second Side:</label>
+
+  <select name="side 2" id="side 2">
+    <option value="Side option 1">Side option 1</option>
+    <option value="Side Option 2">Side Option 2</option>
+    <option value="Side Option 3">Side Option 3</option>
+    <option value="Side Option 4">Side Option 4</option>
+    <option value="Mashed Potato">Mashed Potato</option>
+    <option value="Sweet Potato">Sweet Potato</option>
+    <option value="Baked Potato">Baked Potato</option>
+    <option value="No Side">No Side</option>
+  </select>
+</section>
+<section>
+  <label for="Drinks">Beverage:</label>
+
+  <select name="Drink" id="Drink">
+    <option value="Coke">Coke</option>
+    <option value="Diet Coke">Diet Coke</option>
+    <option value="Ginger Ale">Ginger Ale</option>
+    <option value="Bottle Water">Bottle Water</option>
+    <option value="Skim Milk">Skim Milk</option>
+    <option value="Reg Milk">Reg Milk</option>
+    <option value="Orange Juice">Orange Juice</option>
+    <option value="Cranberry Juice">Cranberry Juice</option>
+    <option value="Apple Juice">Apple Juice</option>
+    <option value="No Drink">No Drink</option>
+  </select>
+  <label for="Drinks">Beverage:</label>
+
+  <select name="Drink" id="Drink">
+    <option value="Coke">Coke</option>
+    <option value="Diet Coke">Diet Coke</option>
+    <option value="Ginger Ale">Ginger Ale</option>
+    <option value="Bottle Water">Bottle Water</option>
+    <option value="Skim Milk">Skim Milk</option>
+    <option value="Reg Milk">Reg Milk</option>
+    <option value="Orange Juice">Orange Juice</option>
+    <option value="Cranberry Juice">Cranberry Juice</option>
+    <option value="Apple Juice">Apple Juice</option>
+    <option value="No Drink">No Drink</option>>
+  </select>
+</section>
+<section>
+  <label for="Dessert">Choose a Dessert:</label>
+
+<select name="Dessert" id="Dessert">
+  <option value="Fruit">Fruit</option>
+  <option value="Dessert of the Day">Dessert of the Day</option>
+  <option value="Nsa Dessert">Nsa Dessert</option>
+  <option value="No Dessert">No Dessert</option>
+</select>
+<section>
+  Anything Extra?
+</section>
+<section>
+  <textarea id="Extras" name="Special request" rows="4" cols="50">
+  </textarea>
+</section>
+</section>
+  <button type="submit">Send</button>
+</form>
+<footer id="Contact us">For any further questions please call (561)347-2753 between the times of 4pm-6:30pm</footer>
+</body>
+<script src="script.js"></script>
+</html>
